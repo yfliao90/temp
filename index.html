@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>PCB Prototype Fabrication/Manufacturing Service</title>
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<script src="scripts/jquery-3.3.1.js"></script>
+</head>
+
+<body>
+<div class="box">
+	<h1>Printed Circuit Board (PCB) Service</h1>
+	<div class="box-box1">
+		
+		<h3>PCB</h3>
+		<div class="line"></div>
+		<div class="box-file">
+			<button class="FileButton">Add your gerber file</button><BR / ><BR / >
+			Only accept zip,rar or PcbDoc<BR / >
+			Files can NOT be changed after order confirmed<BR / >
+			We will ignore special requirements in the Gerber,please contact us if you have any.<BR / ><BR / ><BR / >
+		</div>
+		*Layers : 
+		<input type="text" name="layers1"  id="layers" value="2" size="5"  onclick="total(this)"  class="layers checked"> 
+		<input type="text" name="layers2"  id="layers" value="4" size="5"  onclick="total(this)"  class="layers"><BR / ><BR / >
+		*PCB Dimtension : 
+		<input type="text" name="dimtensionLength"  id="dimtensionLength" value="100" onclick="" class="dimtension">
+		* 
+		<input type="text" name="dimtensionWidth"  id="dimtensionWidth" value="100" onclick="" class="dimtension"><BR / ><BR / >
+		*PCB Qty:
+		<select name="qty" id="qty">
+		  <option value ="5"  selected = "selected">5</option>
+		  <option value ="10">10</option>
+		  <option value="15">15</option>
+		  <option value="20">20</option>
+		</select><BR / ><BR / >
+
+		*DIfferent Design(s):
+		<input type="text" name="design1"  id="design" value="1" size="5" onclick="total(this)"  class="design checked"> 
+		<input type="text" name="design2"  id="design" value="2" size="5"  onclick="total(this)" class="design">
+		<input type="text" name="design3"  id="design" value="3" size="5"  onclick="total(this)" class="design"> 
+		<input type="text" name="design4"  id="design" value="4" size="5"  onclick="total(this)" class="design"> 
+		<input type="text" name="design5"  id="design" value="5" size="5"  onclick="total(this)" class="design"> 
+		<input type="text" name="design6"  id="design" value="6" size="5"  onclick="total(this)" class="design">
+		<input type="text" name="design7"  id="design" value="7" size="5"  onclick="total(this)" class="design"> 
+		<input type="text" name="design8"  id="design" value="8" size="5"  onclick="total(this)" class="design">  <BR / ><BR / > 
+
+		*PCB Thickness:
+		<input type="text" name="thickness1"  id="thickness" value="0.6" size="5"  onclick="total(this)"  class="thickness checked"> 
+		<input type="text" name="thickness2"  id="thickness" value="0.8" size="5"  onclick="total(this)" class="thickness">
+		<input type="text" name="thickness3"  id="thickness" value="1" size="5"    onclick="total(this)" class="thickness"> 
+		<input type="text" name="thickness4"  id="thickness" value="1.2" size="5"  onclick="total(this)" class="thickness"> 
+		<input type="text" name="thickness5"  id="thickness" value="1.6" size="5"  onclick="total(this)" class="thickness"><BR / ><BR / >
+
+
+		*PCB Color:
+		<input type="text" name="color1"  id="color" value="Green" size="5"  onclick="total(this)"  class="color checked"> 
+		<input type="text" name="color2"  id="color" value="Red" size="5"  onclick="total(this)" class="color">
+		<input type="text" name="color3"  id="color" value="Yello" size="5"  onclick="total(this)" class="color"> 
+		<input type="text" name="color4"  id="color" value="Blue" size="5"  onclick="total(this)" class="color"> 
+		<input type="text" name="color5"  id="color" value="White" size="5"  onclick="total(this)" class="color">
+		<input type="text" name="color6"  id="color" value="Black" size="5"  onclick="total(this)" class="color"><BR / ><BR / >
+
+		*Surface Finish:
+		<input type="text" name="surface1"  id="surface" value="HASL" onclick="total(this)"  class="surface checked"> 
+		<input type="text" name="surface2"  id="surface" value="HASL Lead Free" onclick="total(this)" class="surface">
+		<input type="text" name="surface3"  id="surface" value="ENIG" onclick="total(this)" class="surface"> <BR / ><BR / >
+
+		*Copper Weight:
+		<input type="text" name="copper1"  id="copper" value="1oz" size="5"  onclick="total(this)"  class="copper checked"> 
+		<input type="text" name="copper2"  id="copper" value="2oz" size="5"  onclick="total(this)" class="copper"><BR / ><BR / >
+
+		Production Time:
+		<input type="text" name="time1"  id="time" value="2 working days" onclick="total(this)"  class="time "> 
+		<input type="text" name="time1"  id="time" value="3-4 working days" onclick="total(this)"  class="time "> 
+		<input type="text" name="time1"  id="time" value="5-6 working days" onclick="total(this)" class="time"> 
+		<input type="text" name="time1"  id="time" value="7-8 working days" onclick="total(this)" class="time checked"> 
+		<input type="text" name="time1"  id="time" value="9-10 working days" onclick="total(this)" class="time"> <BR / ><BR / >
+	</div>
+	<div class="box-box2">
+		<div class="title">
+			<h1 class="fl">PCB Order:</h1>
+		</div>
+		<ul class="price-list">
+			<li>
+				<span class="lable">Layer</span>
+				<span class="value j-material-name layersInfo" id="layers"></span>
+			</li>
+			<li>
+				<span class="lable">PCB Dimtension</span>
+				<span class="value j-material-name dimtensionInfo" >         </span>
+			</li>
+			<li>
+				<span class="lable">PCB Qty</span>
+				<span class="value j-material-name qtyInfo">         </span>
+			</li>
+			<li>
+				<span class="lable">DIfferent Design(s)</span>
+				<span class="value j-material-name designInfo">         </span>
+			</li>
+			<li>
+				<span class="lable">PCB Thickness</span>
+				<span class="value j-material-name thicknessInfo">         </span>
+			</li>
+			<li>
+				<span class="lable">PCB Color</span>
+				<span class="value j-material-name colorInfo">         </span>
+			</li>
+			<li>
+				<span class="lable">Surface Finish</span>
+				<span class="value j-material-name surfaceInfo">         </span>
+			</li>
+			<li>
+				<span class="lable">Copper Weight</span>
+				<span class="value j-material-name copperInfo">         </span>
+			</li>
+
+		</ul>
+		<div class="line"></div>
+		<span><h1>Sub-Total:<b class="ui-txt-red2" id="goCheckAllPrice">USD$0</b>&nbsp;&nbsp;&nbsp;&nbsp;</h1></span>
+		<ul class="price-list">
+			<li><span>Production Time</span>
+			<span class="value j-material-name timeInfo">         </span>
+		</li>
+			<li><span>Weight</span></li>
+		</ul>
+		<div class="box-cart">
+			<button class="CartButton">Add To Cart</button><BR / ><BR / >
+		</div>
+	</div>
+</div>
+
+</body>
+
+<script src="scripts/total.js"></script>
+</html>

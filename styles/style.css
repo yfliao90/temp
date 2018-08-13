@@ -1,0 +1,70 @@
+body{
+    background-color: #DCDCDC;
+}
+
+h1{
+    color: #ed6a00;
+}
+
+
+.checked{
+    border: 2px solid  #ed6a00;
+}
+.box{
+    border:0px solid red;
+    padding: 50px;
+    width: 95%;
+    height: 500px;
+}
+.line{
+margin-top: 10px;
+width: 100%;
+border-bottom: 1px solid #000000;
+border-color: #DCDCDC;
+}
+.box-file{
+    text-align: center;
+    padding-top: 20px;
+    border: 1px dashed #ed6a00;
+    margin: 20px;
+}
+.FileButton{
+    background-color: #ed6a00;
+    font-size: 20px;
+    color:white;
+    width: 200px;
+    height: 50px;
+}
+
+.box-cart{
+    text-align: center;
+    padding-top: 20px;
+    border: 0px dashed #ed6a00;
+    margin: 10px;
+}
+.CartButton{
+    background-color: #ed6a00;
+    font-size: 20px;
+    color:white;
+    width: 80%;
+    height: 50px;
+}
+.box-box1{
+        background-color: white;
+        width:65%;
+        border:0px solid green;
+        padding: 60px;	
+        float: left;
+}
+.box-box2{
+        background-color: white;
+        width:25%;
+        border:0px solid black;
+        padding: 10px;
+        margin-right: 10px;
+        float: right;
+    }
+.value.j-material-name{
+    float: right;
+    padding-right: 20px;
+}
